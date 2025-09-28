@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    background: #B5E3DB;
+    padding: 0.7rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    background: #11AC92;
+    padding: 1.4rem;
+    box-shadow: 0 0 2rem 0 #47423E;
+    box-sizing: border-box;
+}
+h2{
+    margin-top: 5px;
+    font-size: 1.5rem;
+    color: #B5E3DB;
+}
+h1{
+    font-size: 2rem;
+    color: #B5E3DB;
+}
+table{
+    width: 90vw;
+    margin: auto;
+    margin-top: 1.9rem;
+    border: 0.2rem solid #024B3E;
+    border-radius: 1.5rem;
+    background-color: #067966;
+    padding: 0.5rem;
+    box-shadow: 0 0 2.5rem #1C1A17;
+}
+thead{
+    color: #DDEEEB;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+}
+th{
+    border-bottom: 0.3rem solid #42D7BE;
+    padding: 0.5rem;
+    text-align: left;
+}
+
