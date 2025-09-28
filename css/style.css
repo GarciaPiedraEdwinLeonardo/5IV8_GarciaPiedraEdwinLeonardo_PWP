@@ -36,16 +36,43 @@ table{
     border-radius: 1.5rem;
     background-color: #067966;
     padding: 0.5rem;
-    box-shadow: 0 0 2.5rem #1C1A17;
+    box-shadow: 0 0 3rem #1C1A17;
 }
 thead{
     color: #DDEEEB;
     font-size: 1.3rem;
     padding: 0.5rem;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    font-weight: 800;
 }
 th{
-    border-bottom: 0.3rem solid #42D7BE;
+    border-bottom: 0.3rem solid #B5E3DB;
     padding: 0.5rem;
     text-align: left;
 }
+tbody{
+    color: #F0F8F7;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+td{
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 0.2rem solid #024B3E;
+}
+a{
+    text-decoration: none;
+    color: #B5E3DB;
+    font-weight: 600;
+}
+a:hover{
+    color: #DDEEEB;
+    text-decoration: underline;
+}
+.final-row{
+    border: none;
+}
+
 
