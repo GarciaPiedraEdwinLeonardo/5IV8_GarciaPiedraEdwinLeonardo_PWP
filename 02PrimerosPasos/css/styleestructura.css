@@ -32,3 +32,12 @@ article, aside{
 nav,footer,section{
     background-color: darkgray;
 }
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}

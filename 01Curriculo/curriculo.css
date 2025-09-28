@@ -1,41 +1,39 @@
 body{
     margin: 0;
-    background-color: rgb(215, 236, 250);
+    font-family: "Manrope";
+    background-color: #B5E3DB;
 }
 header{
-    background-color: rgb(163, 163, 223);
-    height: 100%;
+    background-color: #0B8E78;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin:1%;
-    box-shadow: 0 0px 20px rgb(0, 0, 0);
+    box-shadow: 0 0px 2.5rem #322E2A;
+    box-sizing: border-box;
 }
 h1{
-    color: rgb(23, 23, 134);
+    color: #B5E3DB;
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida  Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
     padding: 10px;
     padding-top: 15px;
 }
 span{
-    color: rgb(34, 34, 201);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #B5E3DB;
     font-size: 20px;
 }
 nav{
-    border-top: 5px solid rgb(62, 3, 99);
+    border-top: 5px solid #DDEEEB;
 }
 .lista-nav{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
 }
 .li-nav{
-    color: rgb(144, 70, 204);
+    color: white;
     margin: 0px 15px;
     padding: 5px;
 }
@@ -43,7 +41,7 @@ nav{
     text-decoration: none;
 }
 a.link-nav:hover{
-    color: rgb(49, 8, 73);
+    color: #B5E3DB;
     display: inline-block;
     transform: scale(1.2);
     transition: 0.5 s;
@@ -57,12 +55,13 @@ a.link-nav:hover{
 aside{
     width: 30%;
     height: 100%;
-    background-color: rgb(163, 163, 223);
+    background-color: #0B8E78;
     padding: 10px;
     margin: 0px 0px 0px 30px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0px 20px rgb(0, 0, 0);
+    box-sizing: border-box;
 }
 main{
     display: flex;
@@ -70,37 +69,34 @@ main{
     flex: 1;
     padding: 10px;
     margin: 0px 20px 0px 0px;
-    background-color: rgb(216, 220, 238);
+    background-color: #8CD9CC;
     height: 100%;
     box-shadow: 0 0px 20px rgb(0, 0, 0);
 }
 h3{
-    color: blue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00332B;
     font-size: 25px;
     margin: 10px;
     padding: 5px;
 }
 
 section, article{
-    color: rgb(36, 36, 214);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #024B3E;
     font-size: 17px;
     margin: 10px;
     padding: 5px;
     margin-bottom: 40px;
-    border-bottom: 5px solid rgb(3, 3, 65);
+    border-bottom: 5px solid #00332B;
 }
 
 article{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .container-educacion, .container-habilidades{
     margin: 10px;
     padding: 7px;
-    color: rgb(7, 7, 63);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #B5E3DB;
     font-size: 18px;
     border-bottom: 8px solid rgba(199, 197, 228, 0.842);
 }
@@ -108,21 +104,19 @@ article{
 footer{
     margin: 1%;
     margin-top: 50px;
-    background-color: rgb(5, 5, 48);
+    background-color: #0B8E78;
     padding: 10px;
 }
 .title-footer{
-    color: rgb(180, 176, 219);
+    color: #B5E3DB;
     padding: 20px;
     margin-bottom: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 35px;
-    border-bottom: 4px solid rgb(255, 255, 255);
+    border-bottom: 4px solid #B5E3DB;
 }
 .contact{
-    color:rgb(180, 176, 219) ;
+    color:#8CD9CC ;
     font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -136,10 +130,13 @@ footer{
 }
 .link-git{
     text-decoration: none;
-    color: rgb(207, 205, 224);
+    color: #8CD9CC;
 }
 a.link-git:hover{
     display: inline-block;
     transform: scale(1.2);
     transition: 0.5 s;
+}
+.lista_habilidades{
+    font-size: 0.9rem;
 }
