@@ -3,3 +3,72 @@
     padding: 0;
     font-family: "Manrope";
 }
+body{
+    background: #00332B;
+}
+h1{
+    color: #B5E3DB;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+.title{
+    text-align: center;
+    color: #DDEEEB;
+    margin: 1rem;
+    font-size: 3rem;
+}
+p,li{
+    color: #B5E3DB;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+.container-form{
+    background-color: #11AC92;
+    border: 0.3rem solid #8CD9CC;
+    width: 60vw;
+    margin: auto;
+    margin-top: 3rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+label{
+    color: #00332B;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+input{
+    margin: auto;
+    width: 70%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+.input-special{
+    width: 40%;
+    background-color: #00332B;
+    color: #DDEEEB;
+    font-weight: bold;
+    cursor: pointer;
+}
+.link{
+    text-align: center;
+    margin: 1rem;
+    color: #DDEEEB;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-bottom: 1,5rem;
+}
+a:hover{
+    color: #11AC92;
+}
+a{
+    color: #DDEEEB;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
