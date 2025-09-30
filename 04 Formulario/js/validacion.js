@@ -76,6 +76,30 @@ function validar(formulario){
 
     alert("Email" + (b.test(txt)?" ":"no")+"valido");
 
-    return b.test;Ñ
+    return b.test;
+
+    //Validacion edad real
+    var checkStr = formulario.edad.value;
+    if(edad < 1 || edad > 100){
+        alert("Por favor ingrese una edad válida (1-100 años)");
+        formulario.edad.focus();
+        return false;
+    }
+
+    //Longitud maxima de caracteres
+    if(formulario.nombre.value.length > 50){
+        alert("El nombre no puede exceder los 50 caracteres");
+        formulario.nombre.focus();
+        return false;
+    }
+
+    if(formulario.correo.value.length > 100){
+        alert("El correo no puede exceder los 100 caracteres");
+        formulario.correo.focus();
+        return false;
+    }
+
+    alert("Formulario valido");
+    return true;
 
 }
