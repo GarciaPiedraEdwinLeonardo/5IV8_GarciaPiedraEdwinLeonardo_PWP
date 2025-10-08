@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope";
+    color: #DDE1EE;
+    overflow: hidden;
+}
+
+body{
+    background: #DDEEEB;
+    padding: 3.5rem 0;
+}
+
+.container{
+    background: #0B8E78;
+    width: 70vw;
+    margin: auto;
+    box-shadow: 0 0 1.5rem 0 #1C1A17;
+}
+
+form{
+    padding: 1.5rem;
+}
+
+label{
+    margin: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.table{
+    margin: auto;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+}
+
+tbody{
+    padding: 1.3rem;
+}
+
+tr{
+    padding: 2rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 2rem;
+    color: #00332B;
+    font-size: 1.1rem;
+    font-weight: bold;
+ 
+}
+.boton{
+    width: 70%;
+    background-color: #00332B;
+    padding: 0.2rem;
+    margin-left: 4rem;
+    color: #DDE1EE;
+    border: 0.1rem solid #DDEEEB;
+}

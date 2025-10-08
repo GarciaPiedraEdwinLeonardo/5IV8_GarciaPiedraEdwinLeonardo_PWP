@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./../css/fonts.css">
     <title>Ejercicio 1</title>
 </head>
 <body>
     <div class="container">
         <form action="" method="post" name="formulario">
-            <label for="">Formulario para calculo de inversiones Banco Kawaii con un incremento del 8.05% anual</label>
+            <label for=""><h1>Formulario para calculo de inversiones Banco Kawaii con un incremento del 8.05% anual</h1></label>
             <br>
             <div class="container-table">
                 <table class="table">
 
                     <tr>
-                        <td>
+                        <td class="td-text">
                             Introduce la cantidad que deseas invertir por todo un año
                         </td>
                         <td>
@@ -27,12 +29,12 @@
 
                         </td>
                         <td>
-                            <input type="button" value="Calcular interes" name="enviar" onclick="interes()">
+                            <input type="button" value="Calcular interes" name="enviar" onclick="interes()" class="boton">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>
+                        <td class="td-text">
                             Su saldo total con el interes es de:
                         </td>
                         <td>
@@ -43,7 +45,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <input type="button" value="Borrar datos" name="borrar" onclick="borrari()">
+                            <input type="button" value="Borrar datos" name="borrar" onclick="borrari()" class="boton">
                         </td>
                     </tr>
 

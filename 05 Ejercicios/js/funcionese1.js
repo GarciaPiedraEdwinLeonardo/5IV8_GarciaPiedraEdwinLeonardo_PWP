@@ -1,9 +1,14 @@
 function validarn(e){
     var teclado = document.all ? e.keyCode : e.which;
     if(teclado == 8) return true;
-    var patron = /[0-9\d .]/; //Falta validar que no pueda poner mas de un punto
 
+    var patron = /[0-9\d .]/; //Falta validar que no pueda poner mas de un punto
     var codigo = String.fromCharCode(teclado);
+
+    if(codigo === '.' && e.target.value.indexOf('.') !== -1) {
+        return false; //Ya no puede poner mas de un punto
+    }
+
     return patron.test(codigo);
 }
 
