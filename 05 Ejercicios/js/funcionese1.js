@@ -14,17 +14,19 @@ function validarn(e){
 
 function interes(){
     var valor = document.getElementById("cantidadi").value;
-    alert(valor);
+
+    //Validar que el valor esta entre 3 y 10 numeros
+    if (!valor || isNaN(valor) || valor.length < 3 || valor.length > 10) {
+        alert("Ingresa un número entre 3 y 10 dígitos.");
+        return;
+    }
+
     var parseo = parseFloat(valor);
-    alert(parseo);
     var interes = parseo * 0.085;
-    alert(interes);
     var total = interes + parseo; 
 
     // Limitar el total a dos decimales
     total = total.toFixed(2);
-    alert(total);
-
     document.getElementById("saldoi").value = "$ " + total;
 }
 
