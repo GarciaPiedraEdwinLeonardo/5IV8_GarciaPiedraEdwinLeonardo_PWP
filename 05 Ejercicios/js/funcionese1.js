@@ -17,11 +17,15 @@ function interes(){
     alert(valor);
     var parseo = parseFloat(valor);
     alert(parseo);
-    var interes = parseo*(0.085);//LIMITE A DOS DECIMALES
+    var interes = parseo * 0.085;
     alert(interes);
-    var total = interes + parseo;
+    var total = interes + parseo; 
+
+    // Limitar el total a dos decimales
+    total = total.toFixed(2);
     alert(total);
-    document.getElementById("saldoi").value = "$ " + total; //LIMITE A DOS DECIMALES
+
+    document.getElementById("saldoi").value = "$ " + total;
 }
 
 function borrari(){
