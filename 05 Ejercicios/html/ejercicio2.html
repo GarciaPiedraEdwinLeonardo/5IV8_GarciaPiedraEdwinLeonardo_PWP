@@ -6,6 +6,57 @@
     <title>Ejercicio 2</title>
 </head>
 <body>
-    
+    <form method="post" name="formulario">
+
+        <div class="sueldo-ventas">
+
+            <div class="input-sueldo">
+                <label for="sueldo">Ingrese su sueldo base</label>
+                <input type="text" placeholder="$ 5000" id="sueldo" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="input-ventas-container">
+
+                <div class="input-ventas">
+                    <label for="venta1">Ingrese el monto de la venta 1</label>
+                    <input type="text" placeholder="$ 1000" id="venta1" onkeypress="return validarTeclado(event)">
+                </div>
+
+                <div class="input-ventas">
+                    <label for="venta2">Ingrese el monto de la venta 2</label>
+                    <input type="text" placeholder="$ 1000" id="venta2" onkeypress="return validarTeclado(event)">
+                </div>
+
+                <div class="input-ventas">
+                    <label for="venta3">Ingrese el monto de la venta 3</label>
+                    <input type="text" placeholder="$ 1000" id="venta3" onkeypress="return validarTeclado(event)">
+                </div>
+
+            </div>
+
+            <div class="button-container">
+                <input type="button" class="boton" id="calcular" value="Calcular" onclick="calcularComisiones()">
+            </div>
+
+        </div>
+
+        <div class="comisiones-total">
+
+            <div class="comisiones-container">
+                <label for="comisiones">Comsiones por ventas</label>
+                <input type="text" id="comisiones" readonly>
+            </div>
+
+            <div class="total-container">
+                <label for="total">Total</label>
+                <input type="text" id="total" readonly>
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="./../js/funcionese2.js"></script>
+
 </body>
 </html>
