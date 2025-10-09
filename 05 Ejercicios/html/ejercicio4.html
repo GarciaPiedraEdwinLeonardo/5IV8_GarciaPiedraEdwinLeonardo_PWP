@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="./../../css/fonts.css">
+</head>
+<body>
+
+    <div class="container-back">
+        <a href="./../indexej.html">Regresar a la principal</a>
+    </div>
+
+    <form method="post" name="formulario">
+
+        <div class="container-title">
+            <h1>Calcular calificacion final</h1>
+        </div>
+
+        <div class="descripcion-container">
+            <p>55% del promedio <br>
+            30% de la calificacion del examen final <br>
+            15% de la calificacion del trabajo final</p>
+        </div>
+
+        <div class="input-container">
+
+            <div class="parciales-container">
+
+                <div class="campos">
+                    <label for="">Ingrese su calificacion del 1er parcial</label>
+                    <input type="text" id="cal1" onkeypress="return validarEntrada(event)">
+                </div>
+
+                <div class="campos">
+                    <label for="">Ingrese su calificacion del 2do parcial</label>
+                    <input type="text" id="cal2" onkeypress="return validarEntrada(event)">
+                </div>
+
+                <div class="campos">
+                    <label for="">Ingrese su calificacion del 3er parcial</label>
+                    <input type="text" id="cal3" onkeypress="return validarEntrada(event)">
+                </div>
+
+            </div>
+            
+            <div class="campos">
+                <label for="">Ingrese la calificacion que obtuvo en el examen</label>
+                <input type="text" id="examen" onkeypress="return validarEntrada(event)">
+            </div>
+
+            <div class="campos">
+                <label for="">Ingrese la calificacion que obtuvo en el trabajo final</label>
+                <input type="text" id="trabajo" onkeypress="return validarEntrada(event)">
+            </div>
+
+        </div>
+
+        <div class="button-container">
+            <input type="button" value="Calcular calificacion" id="calcular" onclick="">
+        </div>
+
+        <div class="container-calfinal">
+            <input type="text" id="calfinal">
+        </div>
+
+    </form>
+
+    <script src="./../js/funcionesej4.js"></script>
+
+</body>
+</html>

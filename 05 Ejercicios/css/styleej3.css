@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope";
+    color: #B5E3DB;
+}
+
+body{
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: center;
+    background: #DDEEEB;
+}
+
+form{
+    padding: 2.3rem;
+    width: auto;
+    background: #00332B;
+    box-shadow: 0 0 1.5rem #322E2A;
+    border-radius: 12px;
+    margin-top: 3.5rem;
+}
+
+.container-title{
+    margin-bottom: 1.4rem;
+    font-size: 1.2rem;
+}
+
+table{
+    margin: auto;
+    padding: 3rem;
+    font-size: 1.4rem;
+}
+
+table input{    
+    color: #00332B;
+    font-weight: bold;
+    margin-left: 3rem;
+    font-size: 1.1rem;
+}
+
+tr{
+    padding: 1.5rem;
+}
+
+td{
+    padding: 0.4rem;
+}
+
+.button{
+    width: 82%;
+    border: 0.1rem solid;
+    font-size: 1rem;
+    padding: 0.4rem;
+}
+
+.button:hover{
+    background: #9bd1c7;
+}
+
+
+
+
+.container-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.container-back a {
+    text-decoration: none;
+    color: #00332B;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background: #B5E3DB;
+    border-radius: 5px;
+    border: 1px solid #00332B;
+    transition: all 0.3s;
+}
+
+.container-back a:hover {
+    background: #9bd1c7;
+    transform: translateY(-2px);
+}

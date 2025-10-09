@@ -56,7 +56,6 @@ input{
     color: #00332B;
     font-size: 1.1rem;
     font-weight: bold;
- 
 }
 .boton{
     width: 70%;
@@ -65,4 +64,26 @@ input{
     margin-left: 4rem;
     color: #DDE1EE;
     border: 0.1rem solid #DDEEEB;
+}
+
+.container-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.container-back a {
+    text-decoration: none;
+    color: #00332B;
+    font-weight: bold;
+    padding: 0.2em 0.5rem;
+    background: #B5E3DB;
+    border-radius: 5px;
+    border: 1px solid #00332B;
+    transition: all 0.3s;
+}
+
+.container-back a:hover {
+    background: #9bd1c7;
+    transform: translateY(-2px);
 }
