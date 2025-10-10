@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4</title>
     <link rel="stylesheet" href="./../../css/fonts.css">
+    <link rel="stylesheet" href="./../css/styleej4.css">
 </head>
 <body>
 
@@ -30,24 +31,24 @@
 
                 <div class="campos">
                     <label for="">Ingrese su calificacion del 1er parcial</label>
-                    <input type="text" id="cal1" onkeypress="return validarEntrada(event)">
+                    <input type="text" id="cal1" onkeypress="return validarEntrada(event)" class="align">
                 </div>
 
                 <div class="campos">
                     <label for="">Ingrese su calificacion del 2do parcial</label>
-                    <input type="text" id="cal2" onkeypress="return validarEntrada(event)">
+                    <input type="text" id="cal2" onkeypress="return validarEntrada(event)" class="align2">
                 </div>
 
                 <div class="campos">
                     <label for="">Ingrese su calificacion del 3er parcial</label>
-                    <input type="text" id="cal3" onkeypress="return validarEntrada(event)">
+                    <input type="text" id="cal3" onkeypress="return validarEntrada(event)" class="align3">
                 </div>
 
             </div>
             
             <div class="campos">
                 <label for="">Ingrese la calificacion que obtuvo en el examen</label>
-                <input type="text" id="examen" onkeypress="return validarEntrada(event)">
+                <input type="text" id="examen" onkeypress="return validarEntrada(event)" class="align4">
             </div>
 
             <div class="campos">
@@ -55,13 +56,16 @@
                 <input type="text" id="trabajo" onkeypress="return validarEntrada(event)">
             </div>
 
+            <div class="button-container">
+                <input type="button" value="Calcular calificacion" id="calcular" onclick="">
+            </div>
+
         </div>
 
-        <div class="button-container">
-            <input type="button" value="Calcular calificacion" id="calcular" onclick="">
-        </div>
+        
 
         <div class="container-calfinal">
+            <label for="calfinal">Calificacion final</label>
             <input type="text" id="calfinal">
         </div>
 

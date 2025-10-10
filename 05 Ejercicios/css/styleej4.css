@@ -25,39 +25,55 @@ form{
 .container-title{
     margin-bottom: 1.4rem;
     font-size: 1.2rem;
+    text-align: center;
 }
 
-table{
-    margin: auto;
-    padding: 3rem;
-    font-size: 1.4rem;
+.descripcion-container p{
+    color: #DDEEEB;
+    text-align: center;
+    margin-bottom: 1.9rem;
 }
 
-table input{    
-    color: #00332B;
-    font-weight: bold;
-    margin-left: 3rem;
-    font-size: 1.1rem;
+.campos{
+    margin: 1rem;
 }
 
-tr{
-    padding: 1.5rem;
+.align{
+    margin-left: 7rem ;
+}
+.align2{
+    margin-left: 6.5rem;
+}
+.align3{
+    margin-left: 6.8rem;
+}
+.align4{
+    margin-left: 2rem;
+}
+label{
+    margin-right: 0.5rem;
 }
 
-td{
-    padding: 0.4rem;
+input{
+        width: 35%;
+        padding: 0.2rem;
+        color: #00332B;
+        font-size: 1rem;
+        font-weight: bold;
 }
 
-.button{
-    width: 82%;
-    border: 0.1rem solid;
-    font-size: 1rem;
-    padding: 0.4rem;
+.button-container{
+    display: flex;
+    justify-content: end;
+    margin-right: 2.5rem;
 }
 
-.button:hover{
-    background: #9bd1c7;
+.container-calfinal{
+    margin-top: 2rem;
+    margin-left: 5.5rem ;
 }
+
+
 
 .container-back {
     position: absolute;
