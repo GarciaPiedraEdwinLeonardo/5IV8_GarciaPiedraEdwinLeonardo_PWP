@@ -6,6 +6,7 @@
     <title>Ejercicio 4</title>
     <link rel="stylesheet" href="./../../css/fonts.css">
     <link rel="stylesheet" href="./../css/styleej4.css">
+    <link rel="icon" href="./../../icon/icon-page.png">
 </head>
 <body>
 
@@ -57,7 +58,8 @@
             </div>
 
             <div class="button-container">
-                <input type="button" value="Calcular calificacion" id="calcular" onclick="">
+                <input type="button" value="Calcular calificacion" id="calcular" onclick="calcularCalificacion()">
+                <input type="button" value="Limpiar" id="limpiar" onclick="clean()">
             </div>
 
         </div>
@@ -66,7 +68,7 @@
 
         <div class="container-calfinal">
             <label for="calfinal">Calificacion final</label>
-            <input type="text" id="calfinal">
+            <input type="text" id="calfinal" readonly>
         </div>
 
     </form>
