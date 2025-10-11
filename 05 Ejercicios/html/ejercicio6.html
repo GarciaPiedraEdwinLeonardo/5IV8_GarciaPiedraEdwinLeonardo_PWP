@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <link rel="icon" href="./../../icon/icon-page.png">
+    <link rel="stylesheet" href="./../../css/fonts.css">
+    <link rel="stylesheet" href="./../css/styleej6.css">
+</head>
+<body>
+    
+    <div class="container-back">
+        <a href="./../indexej.html">Regresar a la principal</a>
+    </div>
+
+    <form method="post">
+
+        <div class="container-title">
+            <h1>Calcular edad</h1>
+        </div>
+
+        <div class="input-container">
+
+            <div class="campo">
+                <label for="fecha">Ingrese su fecha de nacimiento</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <div class="button">
+                <input type="button" value="Calcular" onclick="calcularEdad()">
+            </div>
+            
+        </div>
+
+        <div class="edad-container">
+            <label for="edad">Edad</label>
+            <input type="text" readonly id="edad">
+            <div class="button">
+                <input type="button" value="Limpiar" onclick="clean()">
+            </div>
+        </div>
+        
+
+    </form>
+    
+    <script src="./../js/funcionese6.js"></script>
+
+</body>
+</html>
