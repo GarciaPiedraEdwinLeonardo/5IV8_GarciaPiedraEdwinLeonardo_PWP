@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Manrope";
+    color: #B5E3DB;
+}
+
+body{
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: center;
+    background: #DDEEEB;
+}
+
+form{
+    padding: 2rem;
+    width: 60%;
+    background: #00332B;
+    box-shadow: 0 0 1.5rem #322E2A;
+    border-radius: 12px;
+    margin-top: 3.5rem;
+}
+
+.input-container{
+    margin-bottom: 2.5rem;
+}
+
+.container-title{
+    margin-bottom: 1.4rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.campo input{
+    color: #00332B;
+    font-weight: bold;
+    width: 40%;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.button input{
+    color: #00332B;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem 3rem;
+}
+
+.porcentaje-container{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.campo-p input{
+    margin-left: 1rem;
+    color: #00332B;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+}
+
+.container-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.container-back a {
+    text-decoration: none;
+    color: #00332B;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background: #B5E3DB;
+    border-radius: 5px;
+    border: 1px solid #00332B;
+    transition: all 0.3s;
+}
+
+.container-back a:hover {
+    background: #9bd1c7;
+    transform: translateY(-2px);
+}

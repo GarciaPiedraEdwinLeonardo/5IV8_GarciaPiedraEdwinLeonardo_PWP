@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="icon" href="./../../icon/icon-page.png">
+    <link rel="stylesheet" href="./../css/styleej5.css">
+    <link rel="stylesheet" href="./../../css/fonts.css">
+</head>
+<body>
+
+    <div class="container-back">
+        <a href="./../indexej.html">Regresar a la principal</a>
+    </div>
+    
+    <form method="post">
+
+        <div class="container-title">
+            <h1>Calcular porcentaje hombres y mujeres en un grupo</h1>
+        </div>
+
+        <div class="input-container">
+
+            <div class="campo">
+                <label for="hombres">Ingrese el número de hombres en el grupo</label>
+                <input type="text" id="hombres" onkeypress="return validarEntrada(event)">
+            </div>
+
+            <div class="campo">
+                <label for="mujeres">Ingrese el número de mujeres en el grupo</label>
+                <input type="text" id="mujeres" onkeypress="return validarEntrada(event)">
+            </div>
+
+            <div class="button">
+                <input type="button" value="Calcular" onclick="calcularPorcentaje()">
+            </div>
+        </div>
+
+        <div class="porcentaje-container">
+
+            <div class="campo-p">
+                <label for="p-hombre">Hombres</label>
+                <input type="text" readonly id="p-hombre">
+            </div>
+
+            <div class="campo-p">
+                <label for="p-mujer">Mujeres</label>
+                <input type="text" readonly id="p-mujer">
+            </div>
+
+        </div>
+
+        <div class="button">
+                <input type="button" value="Limpiar" onclick="clean()">
+            </div>
+
+    </form>
+
+    <script src="./../js/funcionese5.js"></script>
+
+</body>
+</html>
