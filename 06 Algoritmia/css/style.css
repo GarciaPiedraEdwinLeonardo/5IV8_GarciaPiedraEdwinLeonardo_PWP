@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope";
+}
+
+body{
+    background: #DDEEEB;
+    padding: 2.5rem;
+}
+
+.container{
+    background-color: #0B8E78;
+    margin-bottom: 2.5rem ;
+    padding: 1.5rem;
+    color: #DDE1EE;
+}
+
+h2{
+    margin-bottom: 0.7rem;
+}
+
+.problema-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.problema-content .problema-input{
+    padding: 0.5rem 2rem;
+    color: #0B8E78;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.problema-content .problema-button{
+    padding: 0.5rem 2rem;
+    color: #0B8E78;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.problema-content pre{
+    font-weight: bold;
+    font-size: 1rem;
+    padding-top:0.6rem ;
+}
+
+
+
