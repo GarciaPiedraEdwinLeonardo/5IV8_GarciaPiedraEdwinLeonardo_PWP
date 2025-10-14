@@ -23,9 +23,39 @@ function problema1(){
     output.textContent = resultado;
 
 }
+
 function problema2(){
 
+    var x1 = document.querySelector("#p2_x1").value;
+    var x2 = document.querySelector("#p2_x2").value;
+    var x3 = document.querySelector("#p2_x3").value;
+    var x4 = document.querySelector("#p2_x4").value;
+    var x5 = document.querySelector("#p2_x5").value;
+
+    var y1 = document.querySelector("#p2_y1").value;
+    var y2 = document.querySelector("#p2_y2").value;
+    var y3 = document.querySelector("#p2_y3").value;
+    var y4 = document.querySelector("#p2_y4").value;
+    var y5 = document.querySelector("#p2_y5").value;
+
+    var v1 = [x1,x2,x3,x4,x5];
+    var v2 = [y1,y2,y3,y4,y5];
+
+    v1 = v1.sort(function(a,b){return a-b});
+    v2 = v2.sort(function(a,b){return b-a});
+
+    v2 = v2.reverse();
+
+    var producto = 0;
+
+    for(var i=0;i<v1.length;i++){
+        producto = v1[i]*v2[i];
+    }
+
+    document.querySelector("#p2_resultado").textContent = "El producto escalar minimo es: " + producto;
+
 }
+
 function problema3(){
     
     var input = document.getElementById("p3-input").value.toUpperCase();
@@ -66,9 +96,9 @@ function problema3(){
         }
     }
 
-    var output = "RESULTADOS:\n\n";
+    var output = "Resultados:\n\n";
     output += resultadoTexto;
-    output += `\nPALABRA GANADORA: ${palabraGanadora} con ${maxCaracteres} caracteres únicos`;
+    output += `\nPalabra Ganadora: ${palabraGanadora} con ${maxCaracteres} caracteres únicos`;
 
     document.getElementById("p3-output").textContent = output;
 
