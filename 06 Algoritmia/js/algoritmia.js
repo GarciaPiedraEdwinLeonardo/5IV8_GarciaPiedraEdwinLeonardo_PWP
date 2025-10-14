@@ -26,17 +26,17 @@ function problema1(){
 
 function problema2(){
 
-    var x1 = document.querySelector("#p2_x1").value;
-    var x2 = document.querySelector("#p2_x2").value;
-    var x3 = document.querySelector("#p2_x3").value;
-    var x4 = document.querySelector("#p2_x4").value;
-    var x5 = document.querySelector("#p2_x5").value;
+    var x1 = document.querySelector("#p2-x1").value;
+    var x2 = document.querySelector("#p2-x2").value;
+    var x3 = document.querySelector("#p2-x3").value;
+    var x4 = document.querySelector("#p2-x4").value;
+    var x5 = document.querySelector("#p2-x5").value;
 
-    var y1 = document.querySelector("#p2_y1").value;
-    var y2 = document.querySelector("#p2_y2").value;
-    var y3 = document.querySelector("#p2_y3").value;
-    var y4 = document.querySelector("#p2_y4").value;
-    var y5 = document.querySelector("#p2_y5").value;
+    var y1 = document.querySelector("#p2-y1").value;
+    var y2 = document.querySelector("#p2-y2").value;
+    var y3 = document.querySelector("#p2-y3").value;
+    var y4 = document.querySelector("#p2-y4").value;
+    var y5 = document.querySelector("#p2-y5").value;
 
     var v1 = [x1,x2,x3,x4,x5];
     var v2 = [y1,y2,y3,y4,y5];
@@ -52,8 +52,7 @@ function problema2(){
         producto = v1[i]*v2[i];
     }
 
-    document.querySelector("#p2_resultado").textContent = "El producto escalar minimo es: " + producto;
-
+    document.querySelector("#p2-output").textContent = "El producto escalar minimo es: " + producto;
 }
 
 function problema3(){
