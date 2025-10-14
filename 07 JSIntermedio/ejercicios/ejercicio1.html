@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericio 1 - Parte 2</title>
+    <link rel="shortcut icon" href="./../../icon/icon-page.png" type="image/x-icon">
+    <link rel="stylesheet" href="./../../css/fonts.css">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+<body>
+    
+    <div class="container-back">
+        <a href="./../indexej2.html">Regresar a la principal</a>
+    </div>
+
+    <form method="post">
+
+        <div class="title-container">
+            <h1>Ejercicio 1</h1>
+        </div>
+
+        <div class="input-container">
+
+            <div class="campo">
+                <label>Ingrese el primer numero</label>
+                <input type="text" id="num1" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="campo">
+                <label>Ingrese el segundo numero</label>
+                <input type="text" id="num2" onkeypress="return validarTeclado(event)">
+            </div>
+
+            <div class="button">
+                <input type="button" onclick="calcularResultado()" value="Calcular">
+                <input type="button" onclick="clean()" value="Limpiar">
+            </div>
+
+        </div>
+
+        <div class="result-container">
+
+            <div class="result">
+                <label>Resultado</label>
+                <input type="text" readonly id="resultado">
+            </div>
+
+        </div>
+
+    </form>
+
+    <script src="./../js/ej1.js"></script>
+
+</body>
+</html>
