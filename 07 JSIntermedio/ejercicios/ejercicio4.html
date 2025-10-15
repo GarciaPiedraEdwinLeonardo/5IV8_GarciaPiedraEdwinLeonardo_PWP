@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3 - Parte 2</title>
+    <title>Ejercicio 4 - Parte 2</title>
     <link rel="shortcut icon" href="./../../icon/icon-page.png" type="image/x-icon">
     <link rel="stylesheet" href="./../../css/fonts.css">
     <link rel="stylesheet" href="./../css/style.css">
@@ -17,23 +17,23 @@
     <form method="post">
 
         <div class="title-container">
-            <h1>Calculo de pago al trabajador</h1>
+            <h1>Calculo de utilidades</h1>
         </div>
 
         <div class="input-container">
 
             <div class="campo">
-                <label>Ingrese sus horas trabajadas esta semana</label>
-                <input type="text" id="horas" onkeypress="return validarTeclado(event)">
+                <label>Ingrese el sueldo que gana mensualmente</label>
+                <input type="text" id="sueldo" onkeypress="return validarTeclado(event)">
             </div>
 
             <div class="campo">
-                <label>Ingrese el pago que recibe por hora</label>
-                <input type="text" id="pagoPorHora" onkeypress="return validarTecladoPago(event)">
+                <label>Ingrese su antiguedad en la empresa</label>
+                <input type="text" id="antiguedad" onkeypress="return validarTecladoA(event)">
             </div>
 
             <div class="button">
-                <input type="button" onclick="calcularSueldo()" value="Calcular">
+                <input type="button" onclick="calcularUtilidad()" value="Calcular">
                 <input type="button" onclick="clean()" value="Limpiar">
             </div>
 
@@ -42,15 +42,15 @@
         <div class="result-container">
 
             <div class="result">
-                <label>Pago correspondiente</label>
-                <input type="text" readonly id="sueldo">
+                <label>Utilidad correspondiente</label>
+                <input type="text" readonly id="utilidad">
             </div>
 
         </div>
 
     </form>
 
-    <script src="./../js/ej3.js"></script>
+    <script src="./../js/ej4.js"></script>
 
 </body>
 </html>
