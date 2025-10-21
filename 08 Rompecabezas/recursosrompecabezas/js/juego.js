@@ -181,6 +181,7 @@ function intercambiarPosicionesDOM(idPieza1,idPieza2){
 function actualizarUltimoMovimiento(direccion){
     var ultimoMovimiento = document.getElementById("flecha");
 
+    //CORRECCION QA - No se habian colocado las flechas de derecha e izquierda
     switch(direccion){
         case codigosDireccion.ARRIBA:
             ultimoMovimiento.textContent ="↑";
@@ -189,10 +190,10 @@ function actualizarUltimoMovimiento(direccion){
             ultimoMovimiento.textContent ="↓";
             break;
         case codigosDireccion.DERECHA:
-            ultimoMovimiento.textContent ="";
+            ultimoMovimiento.textContent ="→";
             break;
         case codigosDireccion.IZQUIERDA:
-            ultimoMovimiento.textContent ="";
+            ultimoMovimiento.textContent ="←";
             break;
 
     }
