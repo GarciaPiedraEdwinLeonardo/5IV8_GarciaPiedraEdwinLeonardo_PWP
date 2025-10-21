@@ -148,8 +148,10 @@ function moverEnDireccion(direccion){
 
 
 function intercambiarPosiciones(fila1, columna1, fila2, columna2){
-    var pieza1 = rompe[fila1, columna1];
-    var pieza2 = rompe[fila2, columna2];
+
+    //CORRECCION QA CP-003 Mover piezas
+    var pieza1 = rompe[fila1][columna1]; 
+    var pieza2 = rompe[fila2][columna2];
 
     //Intercambio ya debe de ser parte de los frames y el html
     intercambiarPosicionesRompe(fila1,columna1,fila2,columna2);
