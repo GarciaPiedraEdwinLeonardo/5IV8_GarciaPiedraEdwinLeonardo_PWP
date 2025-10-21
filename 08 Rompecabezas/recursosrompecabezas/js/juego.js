@@ -81,12 +81,13 @@ function mostrarCartelGanador(){
 */
 
 function intercambiarPosicionesRompe(filaPos1, columnaPos1, filaPos2, columnaPos2){
-    var pos1 = rompe[filaPos1, columnaPos1];
-    var pos2 = rompe[filaPos2, columnaPos2];
+    //Correcion QA - CP-003 - Mover piezas
+    var pos1 = rompe[filaPos1][columnaPos1]; 
+    var pos2 = rompe[filaPos2][columnaPos2];
 
-    //Intercamnbio
-    rompe[filaPos1, columnaPos1] = pos2;
-    rompe[filaPos2, columnaPos2] = pos1
+    //Correcion QA - CP-003 - Mover piezas
+    rompe[filaPos1][columnaPos1] = pos2;
+    rompe[filaPos2][columnaPos2] = pos1;
 }
 
 //Funcion que se encargue de saber donde esta la pieza vacia
@@ -138,8 +139,8 @@ function moverEnDireccion(direccion){
         
         actualizarPosicionPiezaVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
-        //tengo que guardar el ultimo movimiento
-        agregarUltimoMovimiento(direccion);
+        //Correcion QA CP-003 - Mover piezas
+        actualizarUltimoMovimiento(direccion);
 
     }
 
@@ -147,8 +148,10 @@ function moverEnDireccion(direccion){
 
 
 function intercambiarPosiciones(fila1, columna1, fila2, columna2){
-    var pieza1 = rompe[fila1, columna1];
-    var pieza2 = rompe[fila2, columna2];
+
+    //CORRECCION QA CP-003 Mover piezas
+    var pieza1 = rompe[fila1][columna1]; 
+    var pieza2 = rompe[fila2][columna2];
 
     //Intercambio ya debe de ser parte de los frames y el html
     intercambiarPosicionesRompe(fila1,columna1,fila2,columna2);
@@ -178,6 +181,7 @@ function intercambiarPosicionesDOM(idPieza1,idPieza2){
 function actualizarUltimoMovimiento(direccion){
     var ultimoMovimiento = document.getElementById("flecha");
 
+    //CORRECCION QA -  CP-004 - No se habian colocado las flechas de derecha e izquierda
     switch(direccion){
         case codigosDireccion.ARRIBA:
             ultimoMovimiento.textContent ="↑";
@@ -186,19 +190,19 @@ function actualizarUltimoMovimiento(direccion){
             ultimoMovimiento.textContent ="↓";
             break;
         case codigosDireccion.DERECHA:
-            ultimoMovimiento.textContent ="";
+            ultimoMovimiento.textContent ="→"; //QA
             break;
         case codigosDireccion.IZQUIERDA:
-            ultimoMovimiento.textContent ="";
+            ultimoMovimiento.textContent ="←"; //QA
             break;
 
     }
 }
 
 //Necesitamos poder mezclar todas las piezas
+// CORRECCION - QA CPOO5-mezclarPiezas- alert
 function mezclarPiezas(veces){
     if(veces <= 0){
-        alert("Asi no se puede");
         return;
     }
 
@@ -239,8 +243,9 @@ function iniciar(){
 
 }
 
+//Mandamos traer a la funcion
+//CORRECCION MUESTRA LAS INSTRUCCIONES
+mostrarInstrucciones(instrucciones);
+
 iniciar();
 
-//Mandamos traer a la funcion
-
-mostrarInstrucciones(instrucciones);
