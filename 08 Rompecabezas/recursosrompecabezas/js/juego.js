@@ -200,9 +200,9 @@ function actualizarUltimoMovimiento(direccion){
 }
 
 //Necesitamos poder mezclar todas las piezas
+// CORRECCION - QA CPOO5-mezclarPiezas- alert
 function mezclarPiezas(veces){
     if(veces <= 0){
-        alert("Asi no se puede");
         return;
     }
 
