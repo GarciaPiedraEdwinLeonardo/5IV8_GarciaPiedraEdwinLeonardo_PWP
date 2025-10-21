@@ -239,8 +239,9 @@ function iniciar(){
 
 }
 
+//Mandamos traer a la funcion
+//CORRECCION MUESTRA LAS INSTRUCCIONES
+mostrarInstrucciones(instrucciones);
+
 iniciar();
 
-//Mandamos traer a la funcion
-
-mostrarInstrucciones(instrucciones);
