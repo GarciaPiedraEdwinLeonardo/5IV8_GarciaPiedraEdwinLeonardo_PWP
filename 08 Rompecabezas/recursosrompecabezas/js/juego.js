@@ -139,8 +139,8 @@ function moverEnDireccion(direccion){
         
         actualizarPosicionPiezaVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
-        //tengo que guardar el ultimo movimiento
-        agregarUltimoMovimiento(direccion);
+        //Correcion QA CP-003 - Mover piezas
+        actualizarUltimoMovimiento(direccion);
 
     }
 
