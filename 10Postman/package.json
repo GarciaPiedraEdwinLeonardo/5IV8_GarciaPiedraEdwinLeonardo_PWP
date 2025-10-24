@@ -1,7 +1,7 @@
 {
-  "name": "09node",
+  "name": "10postman",
   "version": "1.0.0",
-  "description": "Ejemplo de Node",
+  "description": "Ejemplo de endpoints",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   "author": "GarciaPiedraEdwinLeonardo",
   "license": "ISC",
   "dependencies": {
-    "boostrap": "^2.0.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
   }
 }
