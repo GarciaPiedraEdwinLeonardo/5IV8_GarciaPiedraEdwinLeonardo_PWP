@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PotterApi - Libro de Personajes</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/101326ea39.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro de personajes</h1>
+    </header>
+
+    <div class="container-back">
+        <a href="./../../index.html">Regresar a la principal</a>
+    </div>
+
+    <div class="body-container">
+
+        <section class="half">
+
+            <div class="d-flex center-flex">
+
+                <input type="text" id="characterName" class="lcd-input" placeholder="Ingresa el nombre del mago">
+                <input type="hidden" id="characterId" value="0">
+                <button id="btnSearch" class="btn"><i class="fa-solid fa-wand-sparkles"></i></button>
+                
+                <div class="colums-elements">
+                    <button class="btn" id="btnNext"><i class="fa-solid fa-forward"></i></button>
+                    <button class="btn" id="btnPrev"><i class="fa-solid fa-backward"></i></button>
+                </div>
+
+            </div>
+
+            <div id="characterDisplay" class="d-flex center-flex character-display">
+
+                <img class="character-img" src="./img/varita.svg" alt="Varita">
+
+            </div>
+
+        </section>
+
+        <section id="characterData" class="half">
+
+            <h3 id="characterNameResult" class="center-flex"></h3>
+            
+            <div class="center-flex">
+                <div>Casa de Hogwarts:</div>
+                <div id="characterHouse" class="character-house"></div>
+            </div>
+
+            <div class="center-flex">
+                <div>Interpretado por:</div>
+                <div id="characterActor" class="character-actor"></div>
+            </div>
+
+            <table class="character-info-table">
+
+                <thead>
+
+                    <tr>
+                        <td colspan="2">Información del Mago</td>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Apodo</td>
+                        <td id="characterNickname">-</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Fecha de Nacimiento</td>
+                        <td id="characterBirthdate">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hijos</td>
+                        <td id="characterChildren">-</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="./js/potterapi.js"></script>
+</body>
+</html>
