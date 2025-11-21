@@ -86,28 +86,6 @@ form {
   font-size: 1.2rem;
 }
 
-.container-back {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
-
-.container-back a {
-  text-decoration: none;
-  color: #00332b;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  background: #b5e3db;
-  border-radius: 5px;
-  border: 1px solid #00332b;
-  transition: all 0.3s;
-}
-
-.container-back a:hover {
-  background: #9bd1c7;
-  transform: translateY(-2px);
-}
-
 .lista-estudiantes {
   width: 60%;
   margin-top: 2rem;
