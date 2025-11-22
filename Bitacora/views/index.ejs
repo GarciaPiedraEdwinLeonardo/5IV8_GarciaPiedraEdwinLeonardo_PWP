@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Mantenimiento</title>
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+<body>
+    <h1>Bitácora de Mantenimiento</h1>
+    
+    <form action="/bitacora" method="POST">
+        <div class="title-container">
+            <h2>Agregar Nuevo Registro</h2>
+        </div>
+        
+        <div class="input-container">
+            <div class="campo">
+                <label for="fecha_hora">Fecha y Hora de la Ronda: </label>
+                <input type="datetime-local" id="fecha_hora" name="fecha_hora" required>
+            </div>
+            
+            <div class="campo">
+                <label for="area_sector">Área/Sector Revisado: </label>
+                <input type="text" id="area_sector" name="area_sector" required>
+            </div>
+            
+            <div class="campo">
+                <label for="punto_control">Punto de Control (Checklist): </label>
+                <input type="text" id="punto_control" name="punto_control" required>
+            </div>
+            
+            <div class="campo">
+                <label for="estado">Estado: </label>
+                <select id="estado" name="estado" required>
+                    <option value="">Seleccione un estado</option>
+                    <option value="OK">OK</option>
+                    <option value="Fallo">Fallo</option>
+                </select>
+            </div>
+            
+            <div class="campo">
+                <label for="observaciones">Observaciones: </label>
+                <textarea id="observaciones" name="observaciones"></textarea>
+            </div>
+            
+            <div class="campo">
+                <label for="seguimiento_requerido">Seguimiento Requerido: </label>
+                <select id="seguimiento_requerido" name="seguimiento_requerido" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            
+            <div class="campo">
+                <label for="inspector_operador">Inspector/Operador: </label>
+                <input type="text" id="inspector_operador" name="inspector_operador" required>
+            </div>
+        </div>
+        
+        <div class="button">
+            <button type="submit">Registrar Inspección</button>
+        </div>
+    </form>
+
+    <div class="lista-registros">
+        <h2>Registros de Inspección</h2>
+        
+        <% if (typeof mensaje !== 'undefined' && mensaje) { %>
+            <div class="mensaje <%= mensaje.tipo %>">
+                <%= mensaje.texto %>
+            </div>
+        <% } %>
+        
+        <ul>
+            <% if (registros.length > 0) { %>
+                <% registros.forEach(function(registro) { %>
+                    <li>
+                        <div class="info-registro">
+                            <strong><%= registro.area_sector %> - <%= registro.punto_control %></strong>
+                            <div class="detalles-registro">
+                                Fecha: <%= new Date(registro.fecha_hora).toLocaleString() %> | 
+                                Inspector: <%= registro.inspector_operador %> | 
+                                Estado: <span class="estado-<%= registro.estado.toLowerCase() %>"><%= registro.estado %></span> | 
+                                Seguimiento: <span class="seguimiento-<%= registro.seguimiento_requerido.toLowerCase() %>"><%= registro.seguimiento_requerido %></span>
+                                <% if (registro.observaciones) { %>
+                                    | Observaciones: <%= registro.observaciones %>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="acciones-registro">
+                            <a href="/bitacora/edit/<%= registro.id %>">Editar</a>
+                            <a href="/bitacora/delete/<%= registro.id %>">Eliminar</a>
+                        </div>
+                    </li>
+                <% }) %>
+            <% } else { %>
+                <li>No hay registros de inspección.</li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>

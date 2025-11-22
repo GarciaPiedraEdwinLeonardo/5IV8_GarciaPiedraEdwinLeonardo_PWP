@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  color: #b5e3db;
+}
+
+body {
+  padding: 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ddeeeb;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #00332b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+form {
+  padding: 2rem;
+  width: 80%;
+  max-width: 900px;
+  background: #00332b;
+  box-shadow: 0 0 1.5rem #322e2a;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+.input-container {
+  margin-bottom: 3rem;
+}
+
+.title-container {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.campo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.campo input,
+.campo textarea {
+  color: #00332b;
+  font-weight: bold;
+  width: 60%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.campo select {
+  color: #00332b;
+  font-weight: bold;
+  width: 60%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.campo select option {
+  color: #00332b;
+  font-weight: bold;
+  background-color: white;
+}
+
+.campo textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button button {
+  color: #00332b;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button button:hover {
+  background: #9bd1c7;
+  transform: translateY(-2px);
+}
+
+.lista-registros {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.lista-registros h2 {
+  color: #00332b;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.lista-registros ul {
+  list-style: none;
+  background: #00332b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 1.5rem #322e2a;
+}
+
+.lista-registros li {
+  padding: 1rem;
+  border-bottom: 1px solid #b5e3db;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.lista-registros li:last-child {
+  border-bottom: none;
+}
+
+.info-registro {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+}
+
+.info-registro strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+.detalles-registro {
+  font-size: 0.9rem;
+  color: #9bd1c7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.estado-ok {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.estado-fallo {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.seguimiento-si {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.seguimiento-no {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.acciones-registro {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.acciones-registro a {
+  text-decoration: none;
+  color: #b5e3db;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #b5e3db;
+  border-radius: 5px;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.acciones-registro a:hover {
+  background: #b5e3db;
+  color: #00332b;
+}
+
+.mensaje {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #f44336;
+}
+
+.mensaje.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}

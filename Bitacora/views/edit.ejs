@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de Registro de Bitácora</title>
+    <base href="/">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+<body>
+    <h1>Actualización de Registro de Bitácora</h1>
+    
+    <form action="/bitacora/update/<%= registro.id %>" method="POST">
+        <div class="title-container">
+            <h2>Actualizar datos</h2>
+        </div>
+        
+        <div class="input-container">
+            <div class="campo">
+                <label for="fecha_hora">Fecha y Hora de la Ronda: </label>
+                <input type="datetime-local" id="fecha_hora" name="fecha_hora" value="<%= registro.fecha_hora.toISOString().slice(0,16) %>" required>
+            </div>
+            
+            <div class="campo">
+                <label for="area_sector">Área/Sector Revisado: </label>
+                <input type="text" id="area_sector" name="area_sector" value="<%= registro.area_sector %>" required>
+            </div>
+            
+            <div class="campo">
+                <label for="punto_control">Punto de Control (Checklist): </label>
+                <input type="text" id="punto_control" name="punto_control" value="<%= registro.punto_control %>" required>
+            </div>
+            
+            <div class="campo">
+                <label for="estado">Estado: </label>
+                <select id="estado" name="estado" required>
+                    <option value="OK" <%= registro.estado === 'OK' ? 'selected' : '' %>>OK</option>
+                    <option value="Fallo" <%= registro.estado === 'Fallo' ? 'selected' : '' %>>Fallo</option>
+                </select>
+            </div>
+            
+            <div class="campo">
+                <label for="observaciones">Observaciones: </label>
+                <textarea id="observaciones" name="observaciones"><%= registro.observaciones %></textarea>
+            </div>
+            
+            <div class="campo">
+                <label for="seguimiento_requerido">Seguimiento Requerido: </label>
+                <select id="seguimiento_requerido" name="seguimiento_requerido" required>
+                    <option value="Sí" <%= registro.seguimiento_requerido === 'Sí' ? 'selected' : '' %>>Sí</option>
+                    <option value="No" <%= registro.seguimiento_requerido === 'No' ? 'selected' : '' %>>No</option>
+                </select>
+            </div>
+            
+            <div class="campo">
+                <label for="inspector_operador">Inspector/Operador: </label>
+                <input type="text" id="inspector_operador" name="inspector_operador" value="<%= registro.inspector_operador %>" required>
+            </div>
+        </div>
+        
+        <div class="button">
+            <button type="submit">Actualizar Registro</button>
+            <a href="/" style="text-decoration: none;">
+                <button type="button">Cancelar</button>
+            </a>
+        </div>
+    </form>
+</body>
+</html>
