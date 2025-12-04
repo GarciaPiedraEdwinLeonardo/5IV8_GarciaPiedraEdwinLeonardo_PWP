@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Gato de Gatos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-chess-board"></i> Ultimate Gato de Gatos</h1>
+            <p class="subtitle">Juego de 3 en raya anidado - Gato dentro de gato</p>
+        </header>
+
+        <!-- Panel de Control -->
+        <div class="control-panel">
+            <div class="player-setup">
+                <div class="player-card player-x">
+                    <div class="player-header">
+                        <span class="player-symbol">X</span>
+                        <h3>Jugador X</h3>
+                    </div>
+                    <input type="text" id="playerXName" placeholder="Nombre Jugador X" value="Felix" class="player-input">
+                    <div class="player-status" id="playerXStatus">Esperando...</div>
+                </div>
+
+                <div class="vs-container">
+                    <div class="vs">VS</div>
+                    <button id="startBtn" class="start-btn">
+                        <i class="fas fa-play-circle"></i> Iniciar Juego
+                    </button>
+                </div>
+
+                <div class="player-card player-o">
+                    <div class="player-header">
+                        <span class="player-symbol">O</span>
+                        <h3>Jugador O</h3>
+                    </div>
+                    <input type="text" id="playerOName" placeholder="Nombre Jugador O" value="Luna" class="player-input">
+                    <div class="player-status" id="playerOStatus">Esperando...</div>
+                </div>
+            </div>
+
+            <div class="game-info-panel">
+                <div class="info-box">
+                    <h4><i class="fas fa-info-circle"></i> Estado del Juego</h4>
+                    <div class="status-text" id="gameStatus">Configura los jugadores y haz click en "Iniciar Juego"</div>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-map-marker-alt"></i> Tablero Activo</h4>
+                    <div class="next-board-info" id="nextBoardInfo">Cualquier tablero</div>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-user"></i> Turno Actual</h4>
+                    <div class="current-turn" id="currentTurn">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tablero Principal -->
+        <div class="ultimate-board-container">
+            <div class="ultimate-board" id="ultimateBoard">
+                <!-- 9 tableros pequeños se generarán con JavaScript -->
+            </div>
+        </div>
+
+        <!-- Controles del Juego -->
+        <div class="game-controls">
+            <button id="restartBtn" class="control-btn btn-secondary">
+                <i class="fas fa-redo"></i> Reiniciar Juego
+            </button>
+            <button id="saveBtn" class="control-btn btn-primary">
+                <i class="fas fa-save"></i> Guardar Partida
+            </button>
+            <button id="loadBtn" class="control-btn btn-success">
+                <i class="fas fa-download"></i> Cargar Partidas
+            </button>
+            <button id="rulesBtn" class="control-btn btn-info">
+                <i class="fas fa-question-circle"></i> Reglas
+            </button>
+        </div>
+
+        <!-- Historial y Estadísticas -->
+        <div class="history-section">
+            <div class="history-container">
+                <h3><i class="fas fa-history"></i> Historial de Partidas</h3>
+                <div class="history-list" id="historyList">
+                    <!-- Las partidas se cargarán aquí -->
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <h3><i class="fas fa-chart-bar"></i> Estadísticas</h3>
+                <div class="stats-grid" id="statsGrid">
+                    <!-- Estadísticas se cargarán aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Reglas -->
+        <div id="rulesModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2><i class="fas fa-book"></i> Reglas del Ultimate Gato</h2>
+                <div class="rules-content">
+                    <div class="rule-item">
+                        <h3>1. El Tablero</h3>
+                        <p>Hay un tablero grande de 3x3, y cada celda contiene otro tablero pequeño de 3x3.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>2. Movimiento Inicial</h3>
+                        <p>El primer jugador puede jugar en cualquier celda de cualquier tablero pequeño.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>3. Restricciones de Movimiento</h3>
+                        <p>Cada movimiento determina en qué tablero pequeño jugará el siguiente jugador:</p>
+                        <ul>
+                            <li>Si juegas en la celda (1,2) de un tablero pequeño, el siguiente jugador debe jugar en el tablero pequeño que está en la posición (1,2) del tablero grande.</li>
+                            <li>Si ese tablero pequeño ya está ganado o lleno, el siguiente jugador puede elegir cualquier tablero disponible.</li>
+                        </ul>
+                    </div>
+                    <div class="rule-item">
+                        <h3>4. Ganar un Tablero Pequeño</h3>
+                        <p>Para ganar un tablero pequeño, debes conseguir 3 en raya (como en el gato normal).</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>5. Ganar el Juego</h3>
+                        <p>Para ganar el juego completo, debes ganar 3 tableros pequeños en línea en el tablero grande.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script src="js/ultimateGame.js"></script>
+</body>
+</html>
