@@ -1,22 +1,23 @@
-import express from 'express';
-import path from 'path';
-//Aqui nosotros tenemos que agregar las rutas que se van a consumir
-import productRouter from './routes/productRouter'
+import express from "express";
+import path from "path";
+//aqui nosotros tenemos que agregar las rutas que se van a consumir
+import productroutes from "./routes/productroutes.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
-const __dirname = path.resolve(); //Obtener el directorio actual
+const __dirname = path.resolve(); // Obtener el directorio actual
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../Frontend', 'public')));
+app.use(express.static(path.join(__dirname, "../Frontend", "public")));
 
-app.set('views engine', 'ejs');
-app.set('pubic', path.join(__dirname, '../Frontend', 'public'));
+app.set("views engine", "ejs");
+app.set("public", path.join(__dirname, "../Frontend", "public"));
 
-app.use('/', productRouter);
+//vamos a consumir las rutas
+app.use("/", productroutes);
 
-app.listen(PORT, () =>{
-    console.log('Servidor corriendo en ');
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
